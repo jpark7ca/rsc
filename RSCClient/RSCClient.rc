@@ -1,0 +1,212 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_RSCCLIENT           ICON                    "RSCClient.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_RSCCLIENT MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_RSCCLIENT ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 230, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    ICON            IDI_RSCCLIENT,IDC_MYICON,14,9,20,20
+    LTEXT           "Remote Screen Control Client \n(ß 1.2.0-08.10.2006)",
+                    IDC_STATIC,49,10,111,22,SS_NOPREFIX
+    LTEXT           "By Jae H. Park\n\nCopyright (C) 2006",IDC_STATIC,49,31,
+                    119,25
+    DEFPUSHBUTTON   "OK",IDOK,175,4,50,15,WS_GROUP
+END
+
+IDD_DIALOG_PROP DIALOGEX 0, 0, 337, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Connection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_SERVER,76,5,104,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,76,25,103,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,208,5,32,14,ES_AUTOHSCROLL
+    CONTROL         "Slow Network (8bits)",IDC_RADIO_8BITS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,60,82,10
+    CONTROL         "Moderate Network (15/16bits)",IDC_RADIO_16BITS,"Button",
+                    BS_AUTORADIOBUTTON,108,60,113,10
+    CONTROL         "Fast Network (24/32bits)",IDC_RADIO_32BITS,"Button",
+                    BS_AUTORADIOBUTTON,225,60,96,10
+    CONTROL         "Server's resolution",IDC_RADIO_NO_RES_CHANGE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,18,94,75,10
+    CONTROL         "1024x768",IDC_RADIO_1024_768,"Button",
+                    BS_AUTORADIOBUTTON,96,94,48,10
+    CONTROL         "800x600",IDC_RADIO_800_600,"Button",BS_AUTORADIOBUTTON,
+                    150,94,44,10
+    CONTROL         "Custom Width:",IDC_RADIO_CUSTOM_WIDTH,"Button",
+                    BS_AUTORADIOBUTTON,199,94,58,10
+    DEFPUSHBUTTON   "OK",IDOK,276,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,276,22,50,14
+    LTEXT           "Server Host or IP:",IDC_STATIC,14,9,59,8
+    GROUPBOX        "Color Depth",IDC_STATIC,8,45,322,33
+    LTEXT           "Password:",IDC_STATIC,14,28,36,8
+    LTEXT           "Port:",IDC_STATIC,186,8,17,8
+    LTEXT           "(Default port: 3337)",IDC_STATIC,186,23,72,12
+    EDITTEXT        IDC_EDIT_CUSTOM_WIDTH,261,92,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Resolution",IDC_STATIC166,8,80,322,33
+END
+
+IDD_DIALOG_PASSWORD DIALOGEX 0, 0, 190, 28
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PASSWORD_DLG,7,7,119,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,133,7,50,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_DIALOG_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "RSCClient"
+    IDT_TIMER_SCREEN        "TIMER_SCREEN"
+    IDC_RSCCLIENT           "RSCCLIENT"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
